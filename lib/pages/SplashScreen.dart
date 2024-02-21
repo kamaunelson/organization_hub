@@ -10,9 +10,13 @@ class SplashScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Add your splash screen content here
-            Image.asset('images/melody.jpg'), // Replace with your image path
+          children: <Widget>[
+            Expanded(
+              child: Image.asset(
+                'images/OrganizationHub.jpg', // image path
+                fit: BoxFit.contain, // Adjust image fit to contain within the available space
+              ),
+            ),
             const SizedBox(height: 20),
             const Text(
               'Organization Hub',
@@ -23,7 +27,7 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const CircularProgressIndicator(), // Or any other loading indicator
+            const CircularProgressIndicator(), // loading indicator
           ],
         ),
       ),
