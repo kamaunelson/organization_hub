@@ -8,14 +8,14 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     // Delay the navigation to simulate a splash screen
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(Duration(seconds: 5), () {
       // Navigate to the login screen
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Login()),
       );
     });
-    
+
     return Scaffold(
       backgroundColor: Colors.white, // Set background color as needed
       body: Center(
