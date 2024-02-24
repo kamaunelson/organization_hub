@@ -1,18 +1,18 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show BoxFit, BuildContext, Center, CircularProgressIndicator, Colors, Column, Expanded, FontWeight, Image, MainAxisAlignment, MaterialPageRoute, Navigator, Scaffold, SizedBox, StatelessWidget, Text, TextStyle, Widget;
 import 'package:organization_hub/pages/Login.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
 
     // Delay the navigation to simulate a splash screen
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 5), () {
       // Navigate to the login screen
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Login()),
+        MaterialPageRoute(builder: (context) => const Login()),
       );
     });
 
