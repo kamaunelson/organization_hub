@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:organization_hub/pages/Login.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
+    // Delay the navigation to simulate a splash screen
+    Future.delayed(Duration(seconds: 2), () {
+      // Navigate to the login screen
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Login()),
+      );
+    });
+    
     return Scaffold(
       backgroundColor: Colors.white, // Set background color as needed
       body: Center(
